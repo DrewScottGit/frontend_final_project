@@ -8,6 +8,7 @@ import Travel from './Components/Travel/Travel';
 import TravelEdit from './Components/Travel/TravelEdit';
 import About from './Components/homePage/About';
 import TravelAdd from './Components/Travel/TravelAdd';
+import Home from './Components/Home';
 
 
 export default function App(){
@@ -16,13 +17,13 @@ export default function App(){
     <div>
       <header>
         <nav>
-          <h1>Travel Companion</h1>
-          <Link className='about' to='/about'>About</Link>
+         
         </nav>
       </header>
         <NavBar />
         <Routes>
         <Route path='/about' element = {<About />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/' element={<Travels />} />
         <Route path='/TravelAdd' element={<TravelAdd />}/>
         <Route path='Travels' element={<Travels />}/>
