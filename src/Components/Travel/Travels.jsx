@@ -1,6 +1,6 @@
 import { getLocations } from '../../Services/travel-api';
 import {useState, useEffect} from 'react';
-import Create from '/CreateLocation';
+import TravelAdd from '../Travel/TravelAdd';
 import { Link } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ export default function Travels() {
                     } 
 
                     let links={
-                        link: `${resource.city}`,
+                        link: `${travel.city}`,
                     }
                     if(travel.city || travel.country){
                         return (
@@ -53,7 +53,7 @@ export default function Travels() {
                     } 
 
                     let links={
-                        link: `${resource.country}`,
+                        link: `${travel.country}`,
                     }
                     if(travel.country){
                         return (
@@ -66,7 +66,7 @@ export default function Travels() {
                     }
                 })}
             </div>
-            <Create />
+            <TravelAdd />
         </div>
     )
 }
