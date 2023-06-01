@@ -7,14 +7,14 @@ export default function Travel(){
   const  [travel, setLocation] = useState([]);
   const nav = useNavigate();
   const {id} = useParams();
-  const [requestData, setRequestData] = useState(new Travel());
+  const [requestData, setRequestData] = useState({});
 
   useEffect(()=> {
     getLocation(id).then(res => setLocation(res.data))
   }, [requestData])
 
   useEffect(() => {
-    setRequestData(new Travel())
+    setRequestData({})
   }, [id]);
 
   const deleteATravel = () => {

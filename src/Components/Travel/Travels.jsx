@@ -8,7 +8,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 export default function Travels() {
     const nav = useNavigate();
     const [travels, setTravels] = useState([])
-    const [requestData, setRequestData] = useState(new travels());
+    const [requestData, setRequestData] = useState({});
 
     useEffect(()=> {
         getLocations()
@@ -16,7 +16,7 @@ export default function Travels() {
     }, [requestData])
 
     useEffect(() => {
-        setRequestData(new travels())
+        setRequestData()
     }, [])
 
     return(
@@ -25,7 +25,7 @@ export default function Travels() {
                 <h2>Citys</h2>
                 {travels.map((travel) => {
                     const deleteATravel = () =>{
-                        setRequestData(new travels());
+                        setRequestData();
                         deleteATravel(travels._id);
                     } 
 
@@ -48,7 +48,7 @@ export default function Travels() {
             <h2>Countrys</h2>
                 {travels.map((travel) => {
                     const deleteATravel = () =>{
-                        setRequestData(new travels());
+                        setRequestData(new travel());
                         deleteATravel(travels._id);
                     } 
 
