@@ -1,21 +1,36 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link, useParams} from 'react-router-dom';
-import {getOneLocation, deleteTravel} from '../../Services/travel-api';
+import { useNavigate, useParams} from 'react-router-dom';
+import {getLocation, deleteTravel} from '../../Services/travel-api';
 
 export default function Travel(){
-  const  [travel, setTravel] = useState([]);
+  const  [travel, setLocation] = useState([]);
+  const nav = useNavigate();
   const {id} = useParams();
+  const [requestData, setRequestData] = useState(new Travel());
+
   useEffect(()=> {
-    getOneLocation(id).then(res => setTravel(res.data))
-  }, [id])
+    getLocation(id).then(res => setLocation(res.data))
+  }, [requestData])
+
+  useEffect(() => {
+    setRequestData(new Travel())
+  }, [id]);
+
+  const deleteATravel = () => {
+    deleteTravel(id)
+    nav('/')
+  };
 
 return (
   <div>
     <div>
-      <h2><Link to={travel.img}></Link></h2>
-      <h3>{travel.description}</h3>
+      <h2>Travel</h2>
+      <h3>{travel.city}{travel.country}{travel.description}{travel.image}</h3>
       <h3>lorum ipsum</h3>
+      <button onClick={deleteATravel}>Delete</button>
+      <button onClick={()=>{nav(`/${id}/edit`)}}>Edit</button>
+      <button onClick={()=>{nav('/')}}>Main</button>
     </div>
   </div>
 )

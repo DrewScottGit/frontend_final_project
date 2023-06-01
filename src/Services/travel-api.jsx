@@ -6,7 +6,7 @@ export const getLocations = () => {
     const response = axios.get(URL);
     return response;
 }
-export const getOneLocation = (id) => {
+export const getLocation = (id) => {
     const URL = `${API_URL}/${id}`;
     const response = axios.get(URL);
     return response;

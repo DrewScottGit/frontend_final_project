@@ -1,12 +1,11 @@
 import React from 'react';
-import { Router, Routes, Route, Link } from 'react-router-dom';
-
+import { BrowserRouter, Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+import Location from './Components/Travel/Travel';
+import Locations from './Components/Travel/Travels';
 import NavBar from './Components/NavBar';
-import Home from './Components/Home';
-import About from './Components/homePage/About';
 import Footer from './Components/homePage/footer';
-import TravelAdd from './Components/TravelAdd';
-import TravelUpdate from './Components/Travel/TravelUpdate'
+
 
 export default function App(){
 
@@ -21,11 +20,9 @@ export default function App(){
       <Router>
         <NavBar />
         <Routes>
-        <Route path='/' element={Home}></Route>
-        <Route path='/about' element={About}></Route>
-        <Route path='/TravelAdd' element={TravelAdd}></Route>
-        <Route path='/TravelUpdate' element={TravelUpdate}></Route>
-        
+        <Route path='/' element={<Locations />} />
+        <Route path='/:id' element={<Location />} />
+        <Route path='/:id/edit' element= {<EditTravel />} />
         </Routes>
       </Router>
       <Footer />
