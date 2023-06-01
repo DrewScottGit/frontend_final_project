@@ -1,4 +1,4 @@
-MERN-CRUD-REACT Travel Companion APP
+# Getting Started with Create React App
 
 MERN stack application that allows the user to create, read, update, and delte data when realted to the users travels.
 
