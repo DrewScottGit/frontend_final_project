@@ -7,7 +7,8 @@ Why?
 This project was buiult because planning travels and remembering travels often do not have their own space to exist and revisit. This applicaiton allows the user to log that information. 
 
 Front page
-![Homepage](https://github.com/DrewScottGit/frontend_final_project/assets/119603622/1bb770dc-f79c-4dc4-a8c2-bf776d132c7d)
+![Homepage](https://github.com/DrewScottGit/frontend_final_project/assets/119603622/79c417f6-17b3-49b7-83c6-eec05665d7a8)
+
 
 
 Built with
