@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import About from './Components/homePage/About';
 import Footer from './Components/homePage/footer';
 import TravelAdd from './Components/TravelAdd';
+import TravelUpdate from './Components/Travel/TravelUpdate'
 
 export default function App(){
 
@@ -23,8 +24,7 @@ export default function App(){
         <Route path='/' element={Home}></Route>
         <Route path='/about' element={About}></Route>
         <Route path='/TravelAdd' element={TravelAdd}></Route>
-        <Route path='' element={TravelDetails}></Route>
-        <Route path='' element={TravelUpdate}></Route>
+        <Route path='/TravelUpdate' element={TravelUpdate}></Route>
         
         </Routes>
       </Router>
