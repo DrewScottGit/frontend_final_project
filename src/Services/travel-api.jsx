@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "https://localhost:3001/api/travel"
+const API_URL = "https://ds-travel-companion-frontend.onrender.com/travels"
 
 export const getLocations = () => {
     const URL = API_URL;
